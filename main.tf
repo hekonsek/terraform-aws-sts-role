@@ -10,7 +10,7 @@ resource "aws_iam_policy_attachment" "role_policy" {
   policy_arn = each.key
   roles = [aws_iam_role.role.name]
 
-  users = var.delegated_root_user_arn != "" && each.key == "arn:aws:iam::aws:policy/AdministratorAccess" ? [var.delegated_root_user_arn] : []
+  users = var.delegated_root_user_name != "" && each.key == "arn:aws:iam::aws:policy/AdministratorAccess" ? [var.delegated_root_user_name] : []
 }
 
 data "aws_iam_policy_document" "assume-role-policy" {

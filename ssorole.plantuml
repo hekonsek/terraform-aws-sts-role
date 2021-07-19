@@ -1,0 +1,12 @@
+@startuml
+
+node master as "Master Account" {
+    actor user as "IAM user"
+}
+node other as "Other Account" {
+    component role as "Administrator role"
+}
+
+user --> role : Assume Administrator Role (with MFA)
+
+@enduml

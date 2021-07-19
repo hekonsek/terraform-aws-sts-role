@@ -17,6 +17,6 @@ variable "policies_arns" {
   default = ["arn:aws:iam::aws:policy/AdministratorAccess"]
 }
 
-variable "delegated_root_user_arn" {
+variable "delegated_root_user_name" {
   default = ""
 }
